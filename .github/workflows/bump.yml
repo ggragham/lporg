@@ -6,7 +6,7 @@ on:
     types:
       - closed
     branches:
-      - master
+      - dumb_fix
 
 jobs:
   build:
