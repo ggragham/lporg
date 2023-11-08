@@ -46,8 +46,8 @@ checksum:
   name_template: "checksums.txt"
   disable: false
 
-signs:
-  - artifacts: checksum
+# signs:
+#   - artifacts: checksum
 
 snapshot:
   name_template: "{{ incpatch .Version }}-next"
