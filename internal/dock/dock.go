@@ -10,6 +10,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/apex/log"
 	"github.com/blacktop/lporg/internal/database"
@@ -295,6 +296,7 @@ func (p *Plist) Save() error {
 
 func (p *Plist) importPlist(path string) error {
 	utils.Indent(log.Info, 3)("importing dock plist")
+	time.Sleep(3 * time.Second)
 	if _, err := utils.RunCommand(context.Background(), "/usr/bin/defaults", "import", "com.apple.dock", path); err != nil {
 		return fmt.Errorf("failed to defaults import dock plist '%s': %v", path, err)
 	}
