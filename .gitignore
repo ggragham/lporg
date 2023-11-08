@@ -20,3 +20,5 @@ lporg
 dist/
 completions/
 manpages/
+
+.DS_Store
